@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+      "adkmcpserver": {
+        "command": "python",
+        "args": [
+          "-m",
+          "/Users/dhruvilpatel/Documents/adk-generator-mcp-server"
+        ]
+      }
+    }
+  }

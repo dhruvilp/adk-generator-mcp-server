@@ -1,0 +1,27 @@
+[project]
+name = "adk-generator-mcp-server"
+version = "0.0.1"
+description = "RAG-powered MCP Server to auto-generate Google ADK agent code."
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi>=0.116.0",
+    "google-genai>=1.24.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.10.1",
+    "numpy==1.26.4",
+    "opensearch-py>=3.0.0",
+    "pydantic>=2.11.7",
+    "python-dotenv>=1.1.1",
+    "sentence-transformers>=5.0.0",
+    "uvicorn>=0.35.0",
+]
+
+[project.scripts]
+start-server = "adk_mcp_server.__main__:run"
+
+[tool.uv]
+required-environments = [
+    "sys_platform == 'darwin' and platform_machine == 'x86_64'",
+]
